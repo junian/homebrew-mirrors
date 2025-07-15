@@ -1,4 +1,4 @@
-cask "dotnet-sdk@8" do
+cask "dotnet-sdk-macos@8" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
