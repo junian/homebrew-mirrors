@@ -30,11 +30,11 @@ cask "dotnet-sdk-macos@9" do
     end
   end
 
-  conflicts_with cask: [
-    "dotnet",
-    "dotnet-sdk@preview",
-    "dotnet@preview",
-  ], formula: "dotnet"
+  # conflicts_with cask: [
+  #   "dotnet",
+  #   "dotnet-sdk@preview",
+  #   "dotnet@preview",
+  # ], formula: "dotnet"
   depends_on macos: ">= :mojave"
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
