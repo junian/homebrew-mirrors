@@ -20,11 +20,11 @@ cask "dotnet-sdk-macos@6" do
     regex(%r{/download/pr/([^/]+)/([^/]+)/dotnet-sdk-v?(\d+(?:\.\d+)+)-osx-#{arch}\.pkg}i)
   end
 
-  conflicts_with cask: [
-    "dotnet",
-    "homebrew/cask-versions/dotnet-preview",
-    "homebrew/cask-versions/dotnet-sdk-preview",
-  ], formula: "dotnet"
+  # conflicts_with cask: [
+  #   "dotnet",
+  #   "homebrew/cask-versions/dotnet-preview",
+  #   "homebrew/cask-versions/dotnet-sdk-preview",
+  # ], formula: "dotnet"
   depends_on macos: ">= :mojave"
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
