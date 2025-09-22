@@ -46,14 +46,12 @@ cask "dotnet-sdk-macos@9" do
               "com.microsoft.dotnet.pack.apphost.9.*",
               "com.microsoft.dotnet.pack.targeting.9.*",
               "com.microsoft.dotnet.sharedframework.Microsoft.NETCore.App.9.*",
-            ],
-            delete:  [
-              "/etc/paths.d/dotnet",
-              "/etc/paths.d/dotnet-cli-tools",
             ]
 
   zap trash: [
     "~/.dotnet",
     "~/.nuget",
+    "/etc/paths.d/dotnet",
+    "/etc/paths.d/dotnet-cli-tools",
   ]
 end
