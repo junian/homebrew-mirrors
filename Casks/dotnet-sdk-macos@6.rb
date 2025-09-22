@@ -36,7 +36,7 @@ cask "dotnet-sdk-macos@6" do
               "com.microsoft.dotnet.pack.apphost.6.*",
               "com.microsoft.dotnet.pack.targeting.6.*",
               "com.microsoft.dotnet.sharedframework.Microsoft.NETCore.App.6.*",
-            ],
+            ]
 
   zap trash: [
     "~/.dotnet",
