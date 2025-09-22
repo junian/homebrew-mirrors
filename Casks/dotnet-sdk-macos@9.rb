@@ -41,8 +41,11 @@ cask "dotnet-sdk-macos@9" do
   # binary "/usr/local/share/dotnet/dotnet"
 
   uninstall pkgutil: [
-              "com.microsoft.dotnet.*",
-              "com.microsoft.netstandard.pack.targeting.*",
+              "com.microsoft.dotnet.dev.9.*",
+              "com.microsoft.dotnet.hostfxr.9.*",
+              "com.microsoft.dotnet.pack.apphost.9.*",
+              "com.microsoft.dotnet.pack.targeting.9.*",
+              "com.microsoft.dotnet.sharedframework.Microsoft.NETCore.App.9.*",
             ],
             delete:  [
               "/etc/paths.d/dotnet",
