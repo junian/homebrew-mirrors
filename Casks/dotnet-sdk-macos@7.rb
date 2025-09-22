@@ -36,14 +36,12 @@ cask "dotnet-sdk-macos@7" do
               "com.microsoft.dotnet.pack.apphost.7.*",
               "com.microsoft.dotnet.pack.targeting.7.*",
               "com.microsoft.dotnet.sharedframework.Microsoft.NETCore.App.7.*",
-            ],
-            delete:  [
-              "/etc/paths.d/dotnet",
-              "/etc/paths.d/dotnet-cli-tools",
             ]
 
   zap trash: [
     "~/.dotnet",
     "~/.nuget",
+    "/etc/paths.d/dotnet",
+    "/etc/paths.d/dotnet-cli-tools",
   ]
 end
