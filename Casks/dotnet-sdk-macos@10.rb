@@ -37,7 +37,7 @@ cask "dotnet-sdk-macos@10" do
   # ], formula: "dotnet"
   depends_on macos: ">= :mojave"
 
-  pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
+  pkg "dotnet-sdk-#{version}-osx-#{arch}.pkg"
   # binary "/usr/local/share/dotnet/dotnet"
 
   uninstall pkgutil: [
