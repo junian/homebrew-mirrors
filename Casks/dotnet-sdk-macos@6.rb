@@ -1,11 +1,11 @@
 cask "dotnet-sdk-macos@6" do
   arch arm: "arm64", intel: "x64"
 
-  on_intel do
+  on_arm do
     version "6.0.428"
     sha256 "a613c068212533d6b034cd614daf63633abcfe6697bc016d76a4ece1ce577c7f"
   end
-  on_arm do
+  on_intel do
     version "6.0.428"
     sha256 "17bd1338041f37b242379b78a92ed9a9529c79894f13e47ae1ecf890a339d3b2"
   end
