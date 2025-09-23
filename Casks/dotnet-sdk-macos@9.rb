@@ -26,12 +26,6 @@ cask "dotnet-sdk-macos@9" do
     end
   end
 
-  conflicts_with cask: [
-    "dotnet-runtime",
-    "dotnet-runtime@preview",
-    "dotnet-sdk@8",
-    "dotnet-sdk@preview",
-  ]
   depends_on macos: ">= :ventura"
 
   pkg "dotnet-sdk-#{version}-osx-#{arch}.pkg"
