@@ -2,15 +2,15 @@ cask "dotnet-sdk-macos@9" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "9.0.100,2787e86a-6efe-4c4d-a3d1-8fd8c302c639,d386f92a6b2b819cb11cc0382dc98bc7"
-    sha256 "f0cf7f4369aabcdda674d2e7ffd1154c769057fc9149a380fc48b32184618c21"
+    version "9.0.305"
+    sha256 "7bbaf37675331cc58704bd4201800e8049658f4670ba256c86e7c42d49c7389b"
   end
   on_intel do
-    version "9.0.100,ce4a7dd7-1baa-45b1-a447-76cac8d50218,128808a7422ca2e0ae37901d7c78cd53"
-    sha256 "07d5ded3aa3e73a3b881a231574cc4d24fc507e316232cd0ed82cf6dc2e85625"
+    version "9.0.305"
+    sha256 "02eaf71a1485949b95d8b75e47c92439726e30eba3565e5dace0e120e9a2384d"
   end
 
-  url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
+  url "https://builds.dotnet.microsoft.com/dotnet/Sdk/#{version}/dotnet-sdk-#{version}-osx-#{arch}.pkg"
   name ".NET SDK"
   desc "Developer platform"
   homepage "https://www.microsoft.com/net/core#macos"
@@ -37,7 +37,7 @@ cask "dotnet-sdk-macos@9" do
   # ], formula: "dotnet"
   depends_on macos: ">= :mojave"
 
-  pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
+  pkg "dotnet-sdk-#{version}-osx-#{arch}.pkg"
   # binary "/usr/local/share/dotnet/dotnet"
 
   uninstall pkgutil: [
