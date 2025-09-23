@@ -3,11 +3,11 @@ cask "dotnet-sdk-macos@10" do
 
   on_arm do
     version "10.0.100-rc.1.25451.107"
-    sha512 "ad94ab7ddeafba6a19cb71d7e4af8f5937cea8d50a15e1fa20751b41ec82cf140b40fded39dbd7d4d50f89ee174ac034a6ae55313aeeb67b453a53dc66cbee5f"
+    sha256 "de5e3009f820e52b179028a71623a26cea1d8941c799ea46ce3a669127f0847d"
   end
   on_intel do
     version "10.0.100-rc.1.25451.107"
-    sha512 "de469378e1f613e867ab34dc7ae69a3c7f39a1fe70537650e3b0a9010c7cecb9e0c3c757c2bb1ea2c96a189014910b354c881b31d91eb876c502e57c5083b7d0"
+    sha512 "00b5d3054f19d4a82862dfb9e7357132d985effd397cdf4e68b2c3bad93eb817"
   end
 
   url "https://builds.dotnet.microsoft.com/dotnet/Sdk/#{version}/dotnet-sdk-#{version}-osx-#{arch}.pkg"
