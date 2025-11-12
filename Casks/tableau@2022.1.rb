@@ -14,7 +14,7 @@ cask "tableau@2022.1" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  # depends_on macos: ">= :high_sierra"
 
   pkg "Tableau Desktop.pkg"
 
