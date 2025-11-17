@@ -13,8 +13,8 @@ cask "microsoft-remote-desktop@latest" do
     strategy :header_match
   end
 
-  auto_updates true
-  depends_on macos: ">= :high_sierra"
+  auto_updates false
+  # depends_on macos: ">= :high_sierra"
 
   pkg "Microsoft_Remote_Desktop_#{version}_installer.pkg"
 
