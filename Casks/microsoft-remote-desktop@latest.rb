@@ -1,11 +1,11 @@
-cask "microsoft-remote-desktop@latest" do
+cask "microsoft-remote-desktop@10.9.9" do
   version "10.9.9"
   sha256 "0820e0b254089175ec30385321c93353dd6bc12a96ba1fe13ec663476dc26a48"
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Remote_Desktop_#{version}_installer.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
   name "Microsoft Remote Desktop"
-  desc "Remote desktop client"
+  desc "Remote desktop client compatible with macOS 12 (Monterey) or later"
   homepage "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac"
 
   livecheck do
