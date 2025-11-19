@@ -5,7 +5,7 @@ cask "microsoft-remote-desktop-for-macos10.13" do
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Remote_Desktop_#{version}_installer.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
   name "Microsoft Remote Desktop"
-  desc "Remote desktop client compatible with macOS 10.12 (Sierra) or later"
+  desc "Remote desktop client compatible with macOS 10.13 (High Sierra) or later"
   homepage "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac"
 
   livecheck do
