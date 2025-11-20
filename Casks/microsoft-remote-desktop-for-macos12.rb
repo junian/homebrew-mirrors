@@ -1,6 +1,6 @@
 cask "microsoft-remote-desktop-for-macos12" do
-  version "10.9.9"
-  sha256 "0820e0b254089175ec30385321c93353dd6bc12a96ba1fe13ec663476dc26a48"
+  version "10.9.10"
+  sha256 "732cf7f5f74f67032455907cb29743e53b6733770e0a92ebc6243e75e5fd99af"
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Remote_Desktop_#{version}_installer.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
@@ -8,13 +8,11 @@ cask "microsoft-remote-desktop-for-macos12" do
   desc "Remote desktop client compatible with macOS 12 (Monterey) or later"
   homepage "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac"
 
-  livecheck do
-    url "https://go.microsoft.com/fwlink/?linkid=868963"
-    strategy :header_match
-  end
+  # deprecate! date: "2024-09-30", because: :discontinued, replacement_cask: "windows-app"
+  # disable! date: "2025-10-01", because: :discontinued, replacement_cask: "windows-app"
 
-  auto_updates false
-  # depends_on macos: ">= :monterey"
+  auto_updates true
+  conflicts_with cask: "windows-app"
 
   pkg "Microsoft_Remote_Desktop_#{version}_installer.pkg"
 
