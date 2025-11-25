@@ -1,6 +1,6 @@
 cask "upwork-desktop" do
-  version "5.6.10.13,3c485d1dd2af4f61"
-  sha256 "90e405f128e4edeccd2303310365712e48932a68b393c737908da44ddbd16927"
+  version "5.8.0.41,f0de03505cc349f2"
+  sha256 "b7304b2ae7caab5775ef1a3f7021d5fb97a456fcd17a46d7e46c4152009eea67"
 
   url "https://upwork-usw2-desktopapp.upwork.com/binaries/v#{version.csv.first.dots_to_underscores}_#{version.csv.second}/Upwork.dmg",
       user_agent: :fake
