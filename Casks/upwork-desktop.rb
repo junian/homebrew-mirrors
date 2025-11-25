@@ -3,7 +3,7 @@ cask "upwork-desktop" do
   sha256 "b7304b2ae7caab5775ef1a3f7021d5fb97a456fcd17a46d7e46c4152009eea67"
 
   url "https://upwork-usw2-desktopapp.upwork.com/binaries/v#{version.csv.first.dots_to_underscores}_#{version.csv.second}/Upwork.dmg",
-      user_agent: :fake
+      user_agent: :browser
   name "Upwork"
   desc "Work marketplace for freelancing"
   homepage "https://www.upwork.com/"
