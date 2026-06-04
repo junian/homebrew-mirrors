@@ -4,6 +4,12 @@ Mirrors for some apps that is not available on official Homebrew Taps.
 
 ## How to use.
 
+Trust my repo.
+
+```bash
+brew trust junian/homebrew-mirrors
+```
+
 Tap my repo.
 
 ```bash
