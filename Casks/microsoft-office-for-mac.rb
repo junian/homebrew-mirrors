@@ -1,17 +1,34 @@
 cask "microsoft-office-for-mac" do
-  version "16.109.26053122"
-  sha256 "f069d50b2e7a846de6e21be229a1aeba49c5a035e9852e40da9c7bf3108f1ed1"
+  on_ventura :or_older do
+    # macOS 12 (Monterey)
+    on_monterey :or_older do
+      
+    end
+    # macOS 13 (Ventura)
+    on_ventura do
+      
+    end
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  # macOS 14 (Sonoma)
+  on_sonoma :or_newer do
+    version "16.109.26053122"
+    sha256 "f069d50b2e7a846de6e21be229a1aeba49c5a035e9852e40da9c7bf3108f1ed1"
+
+    livecheck do
+      url "https://go.microsoft.com/fwlink/p/?linkid=525133"
+      regex(/(\d+(?:\.\d+)+)/i)
+      strategy :header_match
+    end
+  end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_Installer.pkg"
   name "Microsoft Office"
   desc "Office suite"
   homepage "https://www.microsoft.com/en-us/microsoft-365/mac/microsoft-365-for-mac/"
-
-  livecheck do
-    url "https://go.microsoft.com/fwlink/p/?linkid=525133"
-    regex(/(\d+(?:\.\d+)+)/i)
-    strategy :header_match
-  end
 
   auto_updates true
   conflicts_with cask: %w[
