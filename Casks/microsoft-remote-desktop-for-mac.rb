@@ -1,7 +1,8 @@
 cask "microsoft-remote-desktop-for-mac" do
   on_big_sur :or_older do 
     on_sierra :or_older do
-      
+      version "10.3.9"
+      sha256 "40970f99d9ecebb585173531fb1411bad1b65d5a228ed7718a4f435976210d6f"
     end
 
     livecheck do
