@@ -1,20 +1,26 @@
 cask "windows-app-for-mac" do
-  version "11.3.5"
-  sha256 "f725f2a4e48203c6e943d11507f0467938433aeafd220e950456f63638ac05fb"
+  
+  on_sonoma :or_newer do
+    version "11.3.5"
+    sha256 "f725f2a4e48203c6e943d11507f0467938433aeafd220e950456f63638ac05fb"
 
+    livecheck do
+      url "https://go.microsoft.com/fwlink/?linkid=868963"
+      strategy :header_match
+    end
+  end
+  
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Windows_App_#{version}_installer.pkg",
       verified: "officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
   name "Windows App"
   desc "Connect to Windows"
   homepage "https://aka.ms/WindowsApp"
 
-  livecheck do
-    url "https://go.microsoft.com/fwlink/?linkid=868963"
-    strategy :header_match
-  end
-
-  conflicts_with cask: "microsoft-remote-desktop"
-  depends_on macos: :sonoma
+  conflicts_with cask: [
+    "microsoft-remote-desktop",
+    "junian/mirrors/microsoft-remote-desktop-app"
+  ]
+  depends_on macos:
 
   pkg "Windows_App_#{version}_installer.pkg"
 
