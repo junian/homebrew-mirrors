@@ -1,5 +1,10 @@
 cask "microsoft-office-for-mac" do
   on_ventura :or_older do
+    # macOS 10.12 (Sierra)
+    on_sierra do
+      version "16.30.19101301"
+      sha256 "9eee9de31663bc46552dd39183ba13347baaee6871e8dbad218e0817eebcd031"
+    end
     # macOS 10.13 (High Sierra)
     on_high_sierra do
       version "16.43.20110804"
