@@ -8,6 +8,10 @@ cask "microsoft-remote-desktop-for-mac" do
       version "10.5.2"
       sha256 "b648e704f3701116b9abbae7d5960a87fd45d85e9e129561c3cbfd692e48bb96"
     end
+    on_mojave do
+      version "10.8.4"
+      sha256 "158e6d5e0ecbf2421463c95e754fd9e422f93dd5ddcceccb50ecb5a0b24d9ac9"
+    end
 
     livecheck do
       skip "Legacy version"
