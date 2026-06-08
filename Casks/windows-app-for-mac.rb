@@ -33,7 +33,7 @@ cask "windows-app-for-mac" do
     "microsoft-remote-desktop",
     "junian/mirrors/microsoft-remote-desktop-app"
   ]
-  depends_on macos:
+  depends_on :macos
 
   pkg "Windows_App_#{version}_installer.pkg"
 
