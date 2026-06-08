@@ -12,7 +12,11 @@ cask "microsoft-remote-desktop-for-mac" do
       version "10.8.4"
       sha256 "158e6d5e0ecbf2421463c95e754fd9e422f93dd5ddcceccb50ecb5a0b24d9ac9"
     end
-
+    on_catalina do
+      version "10.8.4"
+      sha256 "158e6d5e0ecbf2421463c95e754fd9e422f93dd5ddcceccb50ecb5a0b24d9ac9"
+    end
+    
     livecheck do
       skip "Legacy version"
     end
