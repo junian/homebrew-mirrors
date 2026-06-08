@@ -16,6 +16,10 @@ cask "microsoft-remote-desktop-for-mac" do
       version "10.8.4"
       sha256 "158e6d5e0ecbf2421463c95e754fd9e422f93dd5ddcceccb50ecb5a0b24d9ac9"
     end
+    on_big_sur do
+      version "10.9.5"
+      sha256 "c248d61cd6ebb70dcec9a58c0451806ca3c920b6452498cb37317716ae997457"
+    end
     
     livecheck do
       skip "Legacy version"
