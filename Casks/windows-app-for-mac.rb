@@ -1,9 +1,11 @@
 cask "windows-app-for-mac" do
-  on_ventura :or_older do 
+  on_ventura :or_older do
+    # macOS 12 (Monterey)
     on_monterey :or_older do
       version "11.2.0"
       sha256 "e2a3eafaffc9d6bc5ddc3a79ddde71f819ba21e9e9b8b6269ec05af4ffd80bb9"
     end
+    # macOS 13 (Ventura)
     on_ventura do
       version "11.3.3"
       sha256 "2cd505c3b0b042477276dd8beb48bd0162aaaab5b3aaab1c6954f219a2a74ec5"
@@ -13,6 +15,7 @@ cask "windows-app-for-mac" do
       skip "Legacy version"
     end
   end
+  # macOS 14 (Sonoma)
   on_sonoma :or_newer do
     version "11.3.5"
     sha256 "f725f2a4e48203c6e943d11507f0467938433aeafd220e950456f63638ac05fb"
