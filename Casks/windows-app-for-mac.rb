@@ -28,8 +28,8 @@ cask "windows-app-for-mac" do
     strategy :header_match
   end
 
-  conflicts_with cask: "microsoft-remote-desktop"
-  conflicts_with cask: "junian/mirrors/microsoft-remote-desktop-app"
+  conflicts_with cask: "microsoft-remote-desktop",
+                 cask: "junian/mirrors/microsoft-remote-desktop-app"
   depends_on macos: ">= :ventura"
 
   uninstall launchctl: [
