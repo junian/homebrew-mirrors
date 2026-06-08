@@ -52,7 +52,7 @@ cask "microsoft-office-for-mac" do
     microsoft-word
     onedrive
   ]
-  depends_on macos: :sonoma
+  depends_on :macos
 
   pkg "Microsoft_365_and_Office_#{version}_Installer.pkg",
       choices: [
