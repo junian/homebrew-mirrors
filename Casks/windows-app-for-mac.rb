@@ -31,7 +31,7 @@ cask "windows-app-for-mac" do
 
   conflicts_with cask: [
     "microsoft-remote-desktop",
-    "junian/mirrors/microsoft-remote-desktop-app"
+    "junian/mirrors/microsoft-remote-desktop-for-mac"
   ]
   depends_on :macos
 
