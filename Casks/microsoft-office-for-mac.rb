@@ -6,7 +6,8 @@ cask "microsoft-office-for-mac" do
     end
     # macOS 13 (Ventura)
     on_ventura do
-      
+      version "16.101.25091314"
+      sha256 "783ff93c0914617645a9206d9da7967cf02a9a3bf874ce7372088745d77f9f7f"
     end
 
     livecheck do
