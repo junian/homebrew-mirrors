@@ -25,7 +25,7 @@ cask "parallels-desktop@19.0" do
     "homebrew/cask-versions/parallels@17",
     "homebrew/cask-versions/parallels@18",
   ]
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Parallels Desktop.app"
 

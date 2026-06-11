@@ -7,7 +7,7 @@ cask "aethersx2@latest" do
   desc "Sony PlayStation 2 emulator for ARM based Macs"
   homepage "https://aethersx2.com/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
   depends_on arch: :arm64
 
   app "AetherSX2.app"
