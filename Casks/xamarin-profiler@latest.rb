@@ -2,8 +2,7 @@ cask "xamarin-profiler@latest" do
   version "1.6.13,11"
   sha256 "d190fb22d921945a613b2b8b013cfe4cd775401e98d3350373852f3702e28ce2"
 
-  url "https://dl.xamarin.com/profiler/profiler-mac-#{version.csv.first}-#{version.csv.second}.pkg",
-      verified: "dl.xamarin.com/profiler/"
+  url "https://dl.xamarin.com/profiler/profiler-mac-#{version.csv.first}-#{version.csv.second}.pkg"
   name "Xamarin Profiler"
   desc "Mono log profiler graphical interface"
   homepage "https://learn.microsoft.com/en-us/xamarin/tools/profiler/?tabs=macos"
