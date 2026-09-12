@@ -15,7 +15,7 @@ cask "ugreen-asix-ax88179" do
     pkg ".AX88179_178A_10.15.pkg"
   end
 
-  postflight do
+  postflight_steps do
     system_command "/sbin/kextload",
                    args: [
                      "-b", "com.asix.driver.ax88179-178a"
@@ -23,7 +23,7 @@ cask "ugreen-asix-ax88179" do
                    sudo: true
   end
 
-  uninstall_preflight do
+  uninstall_preflight_steps do
     system_command "/usr/sbin/installer",
                    args: [
                      "-pkg", "#{staged_path}/AX88179_178A_Uninstall_v1.8.0.pkg",

@@ -25,18 +25,18 @@ cask "parallels-desktop@19.0" do
     "homebrew/cask-versions/parallels@17",
     "homebrew/cask-versions/parallels@18",
   ]
-  # depends_on macos: :monterey
+  depends_on :macos
 
   app "Parallels Desktop.app"
 
-  preflight do
+  preflight_steps do
     system_command "chflags",
                    args: ["nohidden", "#{staged_path}/Parallels Desktop.app"]
     system_command "xattr",
                    args: ["-d", "com.apple.FinderInfo", "#{staged_path}/Parallels Desktop.app"]
   end
 
-  postflight do
+  postflight_steps do
     system_command "#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
                    args: ["init"],
                    sudo: true

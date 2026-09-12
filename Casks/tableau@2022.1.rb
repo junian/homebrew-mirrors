@@ -14,7 +14,7 @@ cask "tableau@2022.1" do
     end
   end
 
-  # depends_on macos: :catalina
+  depends_on :macos
 
   pkg "Tableau Desktop.pkg"
 

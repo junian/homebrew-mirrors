@@ -19,7 +19,7 @@ cask "screen-studio@2" do
   end
 
   auto_updates true
-  # depends_on macos: :catalina
+  depends_on :macos
 
   app "Screen Studio.app"
 
